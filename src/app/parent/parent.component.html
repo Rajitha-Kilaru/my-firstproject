@@ -1,0 +1,29 @@
+<h1 class="head">Parent to Child(@Input)</h1>
+
+<h1>Data send from Parent to Child</h1>
+<label>FirstName: </label>
+<input type="text" name="fname" [(ngModel)]="obj1.fname"><br><br>
+
+<label>LastName: </label>
+<input type="text" name="lname" [(ngModel)]="obj1.lname"><br><br>
+
+<label>Email: </label>
+<input type="email" name="email" [(ngModel)]="obj1.email"><br><br>
+
+
+<label>Password: </label>
+<input type="password" name="password" [(ngModel)]="obj1.pswd"><br><br>
+
+<button ><a routerLink="/child" routerLinkActive="active">Share Data</a></button><br><br>
+
+
+<label>Email: </label>
+<input type="email" name="email" [(ngModel)]="parentobj.email"><br><br>
+
+
+<label>Password: </label>
+<input type="password" name="password" [(ngModel)]="parentobj.password"><br><br> 
+
+<router-outlet></router-outlet>
+
+

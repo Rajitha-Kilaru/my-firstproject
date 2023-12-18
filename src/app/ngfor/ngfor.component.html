@@ -1,0 +1,21 @@
+<h1 class="head">ngFor Component</h1>
+<div *ngFor = "let hero of heroes">
+	<p>{{hero.id}} {{hero.name}}</p>
+</div>	
+
+<div>
+	<table style="width:100%">
+	  <tr>
+	    <th>NO</th>
+	    <th>Name</th>
+	    <th>Awards</th>
+	    <th>Movie Status</th>
+	  </tr>
+	  <tr *ngFor = "let hero1 of heroes1">
+	    <td  *ngIf = "hero1.movieSatuts === 'pass'">{{hero1.id}}</td>
+	    <td *ngIf = "hero1.movieSatuts === 'pass'">{{hero1.name}}</td>
+	    <td *ngIf = "hero1.movieSatuts === 'pass'">{{hero1.awards}}</td>
+	    <td *ngIf = "hero1.movieSatuts === 'pass'">{{hero1.movieSatuts}}</td>
+	  </tr>
+	</table>
+</div>	

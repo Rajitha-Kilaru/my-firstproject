@@ -1,0 +1,47 @@
+<h1 class="head">ngif Component</h1>
+
+<!-- interpolation -->
+<div>
+	<p class="para">{{title}}</p>
+	<p>{{name}}</p>
+	<p>{{bname}}</p>
+</div>	
+
+<!-- Property Binding -->
+<h2 class="proBind">{{propertyBinding}}</h2>
+<img [src]="imgSrc">
+
+<!-- ngIf Directive -->
+<h3 class="ngif">{{ngDir}}</h3>
+
+<h4 class="ngif">Checking One If Condition</h4>
+<div *ngIf = "data1.type">
+	<p>Data1 User Data</p>
+	<h5>{{data1.dataType}}, {{data1.concept}}, {{data1.type}}</h5>
+</div>	
+
+<h4 class="ngif">Checking Two If Condition</h4>
+<div *ngIf = "data2.name && data2.mobileno">
+	<p>Data2 User Data</p>
+	<h5>{{data2.name}}, {{data2.email}}, {{data2.course}}, {{data2.mobileno}}</h5>
+</div>	
+
+<h4 class="ngif">Checking If and else Condition</h4>
+<div *ngIf = "data3.file4 && data3.file1 && data3.file2; else displayText">
+	<p>	{{data3.file1}}
+		{{data3.file2}}
+		{{data3.file3}}
+		{{data3.file4}}
+		{{data3.file5}}
+	</p>
+</div>	
+<ng-template #displayText>
+	<p>Invalid Files</p>
+</ng-template>
+<button (click)=" myfun(21)">alert</button>
+
+
+<h5>ngIf condition with then and else conditions</h5>
+<div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>

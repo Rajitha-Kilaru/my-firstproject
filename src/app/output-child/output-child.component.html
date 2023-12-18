@@ -1,0 +1,16 @@
+<button (click)="myChildFunc()">Child to Parent</button><br><br>
+
+<h2>Data from Child Field to Parent Feild</h2> 
+
+<label>ChildName: </label>
+<input type="text" name="name" [(ngModel)]="fdobj.fname"><br><br>
+<label>ChildId: </label>
+<input type="text" name="id" [(ngModel)]="fdobj.id"><br><br>
+<label>ChildEmail: </label>
+<input type="email" name="email" [(ngModel)]="fdobj.email"><br><br>
+<label>ChildPassword: </label>
+<input type="password" name="password" [(ngModel)]="fdobj.pswd"><br><br>
+
+
+<button (click)="withFields()">Click Here</button><br><br>
+

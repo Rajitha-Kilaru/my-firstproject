@@ -1,0 +1,33 @@
+<h1 class="head1">Child to Parent(@Output)</h1>
+<div >
+<p *ngFor="let val of items">{{val}}</p>
+</div>
+
+<h1>Data send from Child to Parent</h1>
+
+<label>FName: </label>
+<input type="text" name="fname" [(ngModel)]="parentObjData.fname"><br><br>
+<label>LName: </label>
+<input type="text" name="lname" [(ngModel)]="parentObjData.lname"><br><br>
+<label>Mobile No: </label>
+<input type="text" name="mobile" [(ngModel)]="parentObjData.mobile"><br><br>
+<label>Email: </label>
+<input type="email" name="email" [(ngModel)]="parentObjData.email"><br><br>
+<label>Password: </label>
+<input type="password" name="pswd" [(ngModel)]="parentObjData.pswd"><br><br>
+
+<app-output-child (childData)="parentData($event)" (fieldData)="myFieldData($event)"></app-output-child>
+
+
+
+<label>ParentName: </label>
+<input type="text" name="name" [(ngModel)]="myFieldObjData.feiname"><br><br>
+<label>ParentId: </label>
+<input type="text" name="id" [(ngModel)]="myFieldObjData.feiid"><br><br>
+<label>ParentEmail: </label>
+<input type="email" name="email" [(ngModel)]="myFieldObjData.feiemail"><br><br>
+<label>ParentPassword: </label>
+<input type="password" name="pswd" [(ngModel)]="myFieldObjData.feipswd"><br><br>
+
+
+
